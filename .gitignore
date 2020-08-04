@@ -4,6 +4,7 @@ packages/
 *.user
 _ReSharper.*/
 bin/
+TestPlayGround/
 obj/
 .nuget/
 Debug/

@@ -1,6 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VkBot", "VkBot\VkBot.csproj", "{5090AC66-3447-42E4-BF48-6A7D1BC377E9}"
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30309.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VkBot", "VkBot\VkBot.csproj", "{5090AC66-3447-42E4-BF48-6A7D1BC377E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestPlayGround", "TestPlayGround\TestPlayGround.csproj", "{8E55E3A6-899A-4FB1-8400-DE5B3A917494}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +17,15 @@ Global
 		{5090AC66-3447-42E4-BF48-6A7D1BC377E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5090AC66-3447-42E4-BF48-6A7D1BC377E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5090AC66-3447-42E4-BF48-6A7D1BC377E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E55E3A6-899A-4FB1-8400-DE5B3A917494}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E55E3A6-899A-4FB1-8400-DE5B3A917494}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E55E3A6-899A-4FB1-8400-DE5B3A917494}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E55E3A6-899A-4FB1-8400-DE5B3A917494}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EDA8A7B4-B3BD-4F46-9F7F-44BAE28B9E26}
 	EndGlobalSection
 EndGlobal

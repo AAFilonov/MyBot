@@ -8,6 +8,7 @@ using VkNet.Abstractions;
 using VkNet.Model.RequestParams;
 
 
+   
 
 namespace VkBot.Controllers
 {
@@ -45,19 +46,37 @@ namespace VkBot.Controllers
                     {
                         // Десериализация
                         var msg = Message.FromJson(new VkResponse(updates.Object));
-                        // ВОТ СДЕСЬ МЫ РЕШАЕМ ЧЕ ОТПРАВИТЬ ЫААЫ
-                        // Отправим в ответ полученный от пользователя текст
-                        _vkApi.Messages.Send(new MessagesSendParams
-                        {
-                            RandomId = new DateTime().Millisecond,
-                            PeerId = msg.PeerId.Value,
-                            Message = msg.Text
-                        });
+                        HandleAsync(msg);
+                      
                         break;
                     }
             }
 
             return Ok("ok");
+        }
+        async public void HandleAsync(Message msg)//обработка полученного сообщения
+        {
+
+            // Отправим в ответ полученный от пользователя текст
+            
+            await _vkApi.Messages.SendAsync(new MessagesSendParams
+            {
+                RandomId = new DateTime().Millisecond,
+                PeerId = msg.PeerId.Value,
+                Message = "Your text: "+ msg.Text
+            });
+
+        }
+            public void Handle(Message msg)
+        {
+          
+            // Отправим в ответ полученный от пользователя текст
+            _vkApi.Messages.Send(new MessagesSendParams
+            {
+                RandomId = new DateTime().Millisecond,
+                PeerId = msg.PeerId.Value,
+                Message = "Your text: " + msg.Text
+            });
         }
     }
 }
